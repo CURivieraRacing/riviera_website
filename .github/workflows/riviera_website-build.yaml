@@ -1,0 +1,41 @@
+# To better understand this file read this:
+# https://docs.ionos.space/docs/github-actions-customization/
+
+name: "Deploy Now: Execute Build"
+
+on:
+  workflow_call:
+    inputs:
+      site-url:
+        required: true
+        type: string
+      branch-id:
+        required: true
+        type: string
+
+env:
+  DEPLOYMENT_FOLDER: ./
+
+jobs:
+# Please do not rename this job
+  build-project:
+    name: build riviera_website
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: 'recursive'
+
+# Please do not touch the following action
+      - name: Store deployment content
+        uses: ionos-deploy-now/artifact-action@v1
+        with:
+          api-key: ${{ secrets.IONOS_API_KEY }}
+          service-host: api-eu.ionos.space
+          project-id: 6ee265c9-ba39-4445-a57e-2c8aad0aa7ef
+          branch-id: ${{ inputs.branch-id }}
+          version: ${{ github.sha }}
+          folder: ${{ env.DEPLOYMENT_FOLDER }}
+          config-file: .deploy-now/riviera_website/config.yaml
+          action: upload
