@@ -250,7 +250,7 @@ nav ul li a:hover::after {
 
 /*----About-----*/
 .about {
-    padding: 6rem 0;
+    padding: 6rem 0 2rem 0;
     background: var(--background-color-light-blue);
 }
 
@@ -276,13 +276,55 @@ nav ul li a:hover::after {
 }
 
 .about-video {
-    display: flex;
+    /*display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;*/
     margin: 2rem auto 0 auto;
-    width: 100%;
+    max-width: 100%;
 }
 
+.about-video-container {
+    width: 100%;
+    position: relative;
+    padding-bottom: 100px;
+    height: 0;
+    overflow: hidden;
+    border: 1px solid red;
+}
+
+.about-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+/*-----Video-----*/
+.video {
+    background: var(--background-color-light-blue);
+    padding-bottom: 6rem;
+    display: flex;
+    justify-content: center;
+}
+
+.video-container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 /*-----Concept-----*/
 .concept {
@@ -652,6 +694,10 @@ footer {
         width: 100%;
     }
 
+    /*-----Video-----*/
+    .video-container {
+        width: 90%;
+    }
 
     /*-----Concept-----*/
     .concept {
@@ -862,6 +908,12 @@ footer {
     .about-container {
         width: 80%;
         margin: auto;
+    }
+
+
+    /*-----Video-----*/
+    .video-container {
+        width: 70%;
     }
 
 
