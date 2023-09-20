@@ -178,7 +178,7 @@ nav ul li a:hover::after {
 .hero {
     min-height: 100vh;
     width: 100%;
-    background-image: var(--gradient), url("../assets/images/hero/hero.jpg");
+    background-image: var(--gradient), url("../assets/images/hero/hero.png");
     background-position: center;
     background-size: cover;
     position: relative;
@@ -428,6 +428,13 @@ nav ul li a:hover::after {
     text-align: center;
 }
 
+.team-heading {
+    padding: 1rem 0 2rem 0;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
 .team-card-container {
     width: 80%;
     margin: auto;
@@ -499,7 +506,8 @@ nav ul li a:hover::after {
 .sponsor-logos-container {
     width: 80%;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
     justify-content: center;
     margin: auto;
     padding: 2rem 0;
@@ -799,10 +807,6 @@ footer {
         margin: auto;
         padding: 2rem 0;
     }
-
-    .sponsor-logos {
-        height: 125px;
-    }
     
     .sponsor-logos a {
         display: block;
@@ -811,7 +815,8 @@ footer {
     }
 
     .sponsor-image {
-        height: 100px;
+        max-width: 80%;
+        height: auto;
     }
 
     .sponsors p {
