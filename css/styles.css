@@ -20,6 +20,10 @@
     --background-color-light-blue: #DEEBF7;
     --background-color-grey: #E0E0E0;
     --background-color-white: #FFFFFF;
+    --diamond: #38a3af;
+    --gold: #b89c02;
+    --silver: #838383;
+    --bronze: #CD7F32;
     --gradient: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7));
 }
 
@@ -419,6 +423,53 @@ nav ul li a:hover::after {
 }
 
 
+/*-----Newsletter-----*/
+.newsletter {
+    background: var(--background-color-light-blue);
+    padding: 6rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+    position: relative;
+}
+
+.newsletter-left {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    margin: auto 0;
+    position: relative; 
+}
+
+.newsletter-left img {
+    height: 500px;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.62);
+    width: 100%;
+}
+
+.newsletter-right {
+    padding: 2rem;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    position: relative; 
+}
+
+.newsletter-right a {
+    width: 6rem;
+    text-align: center;
+}
+
 /*-----Team-----*/
 .team {
     padding: 6rem 0;
@@ -498,11 +549,25 @@ nav ul li a:hover::after {
 
 /*-----Sponsors-----*/
 .sponsors {
-    padding: 4rem 0;
+    padding: 4rem 25rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     background: var(--background-color-light-blue);
+}
+
+@media (min-width: 1023px) and (max-width: 1800px) {
+    .sponsors {
+        padding: 4rem 15rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        background: var(--background-color-light-blue);
+    } 
+}
+
+.sponsor-tier {
+    padding: 3rem 0 1rem 0;
 }
 
 .sponsor-logos-container {
@@ -512,7 +577,7 @@ nav ul li a:hover::after {
     gap: 2rem;
     justify-content: center;
     margin: auto;
-    padding: 2rem 0;
+    padding: 2rem 0 3rem 0;
 }
 
 .sponsor-image-link {
@@ -526,7 +591,8 @@ nav ul li a:hover::after {
 }
 
 .sponsor-image {
-    width: 320px;
+    height: 100%;
+    width: 250px;
 }
 
 .brochure {
@@ -787,6 +853,35 @@ footer {
     }
 
 
+    /*-----Newsletter-----*/
+    .newsletter-container {
+        margin: auto;
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .newsletter-left {
+        width: 80%;
+        height: 200px;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0.5);
+        height: auto;
+    }
+
+    .newsletter-left img {
+        height: auto;
+        background: rgba(0, 0, 0, 1);
+        display: block;
+    }
+
+    .newsletter-right {
+        width: 60%;
+        padding: 3rem;
+    }
+
     /*-----Team-----*/
     .team-member-card {
         background-color: var(--background-color-white);
@@ -813,7 +908,7 @@ footer {
         display: flex;
         flex-direction: column;
         margin: auto;
-        padding: 2rem 0;
+        padding: 2rem 2rem;
     }
     
     .sponsor-logos a {
@@ -1000,6 +1095,40 @@ footer {
         font-size: 1.5rem;
     }
 
+
+    /*-----Newsletter-----*/    
+    .newsletter-container {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .newsletter-left {
+        height: 400px;
+    }
+    
+    .newsletter-left img {
+        height: 400px;
+        box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.62);
+    }
+    
+    .newsletter-right {
+        padding: 2rem;
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+    }
+    
+    .newsletter-right a {
+        width: 6rem;
+        text-align: center;
+    }
+
     
     /*-----Team-----*/
     .team-member-card {
@@ -1015,7 +1144,7 @@ footer {
 
     /*-----Sponsors-----*/
     .sponsors {
-        padding: 4rem 0;
+        padding: 4rem 5rem;
         text-align: center;
         display: flex;
         flex-direction: column;
